@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Light on & off</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Can On The Light</h1>
+    </div>
+    <div class="container-2">
+        <button class="btn" id="btn">On A Light</button>
+        <img src="light-bulb-idea-svgrepo-com (1).svg" alt="light on" id="lightOnImage">
+        <img src="light-bulb-idea-svgrepo-com.svg" alt="light off" id="lightOffImage">
+        <button class="btn1" id="btn1">Off A Light</button>
+
+         
+    </div>
+ 
+    <script>
+        const onButton = document.getElementById('btn');
+        const offButton = document.getElementById('btn1');
+        const lightOnImage = document.getElementById('lightOnImage');
+        const lightOffImage = document.getElementById('lightOffImage');
+ 
+        const lightOn = () => {
+            lightOnImage.style.display = 'block';
+            lightOffImage.style.display = 'none';
+        }
+ 
+        const lightOff = () => {
+            lightOnImage.style.display = 'none';
+            lightOffImage.style.display = 'block';
+        }
+ 
+        onButton.addEventListener('click', lightOn);
+        offButton.addEventListener('click', lightOff);
+    </script>
+</body>
+</html>
